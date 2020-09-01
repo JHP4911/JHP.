@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Science Protfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style>
+			body{
+				font-size:30px;
+			}
+		</style>		
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">My Protoflio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Final Year Project</a></li>
+						<!-- <li><a href="elements.html">Elements</a></li> -->
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Machine error Analysis</h1>
+
+
+							<h1>Innovation</h1>		
+
+							<span>
+								<img src="images/benifits.png" alt="" 
+								style="width:100%;border:5px solid blueviolet; border-radius: 10px; margin-left:20px;object-fit: cover;"
+								/>
+							</span>
+
+							<p> In the above image we can see comparison between our system and the current method of detecting deviations. Two parametres are compared are time and man power.
+								<span style = "font-weight: 700;font-style: italic;">Our model takes less than 1 minute to provide predictions compared to the 1 month 
+								and only 1 person to operate the system.
+								</span>
+							</p>
+
+							<h3>Final Dot Net Gui</h3>
+							<span><img src="images/dotnetgui.png" alt="" 
+										style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+
+						
+
+							<h1 style ="margin-top:10px;">Project Goal</h1>
+
+							<p>
+								The project aims at developing an AI model that identifies the root causes of problems caused in the machine and provides corrective actions.
+							</p>
+
+							<h1>About Our Clients</h1>
+							
+							<span><img src="images/fransha_pharma.jpg" alt="" 
+								style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+							/>
+							</span>
+							<p>
+								Fransha Pharma LLP is a global regulatory and technical service provider for the pharmaceutical, biopharmaceutical, healthcare and medical device industry.whose goal is finding the best solution for their clients. 
+								One of the challenges they face is the time and resources spent in detecting machine/ root causes. In this project we aim to build  an ml system which helps automate the deviation analysis process.
+
+							</p>
+
+							<h2>Problem Statement</h2>
+
+							<p>Given a <em>deviation</em> predict the <em>root cause/s</em></p>
+
+							<h3>What is Deviation ?</h3>
+
+							<span><img src="images/deviation_example.png" alt="" 
+								style="align:center;width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+
+							<p>
+							Any product  which has deviated from its desired result and produces unknown or unwanted results is said to have been deviated from the actual goal
+							hence the name deviation.
+							<b>
+							Consider the above figure in which we are assigned  the task of manufacturing  a tablet.
+							The tablet is made up of three chemicals, chemical <mark>A,B,C</mark>. which need to be added in proper concentrations 10% of A and B and 15% C.  
+							But due to some error called as root cause we deviate and add 10% C. As a result of this error the final product deviates from the intended product. 
+							Now our job is to detect this error and prevent it in the future so such a deviation  does not occur again.</b> 
+
+							In this project we need to build an AI system which helps detect such errors also termed as root causes. The below  figure showsn all possiable  root causes  we need to detect. 
+							<u>For the above example one of the possible root causes might be  procedure </u>. A single input can have multiple root causes hence this is a multilabel problem.
+							</p>
+
+
+							<h2>Requirements and My Role</h2>
+							
+							<p>	
+								
+								Requirments:
+							</br>
+								<ol>
+								<li>
+									Given the deviation see if its possiable to develope a ML system 
+									which can detect root causes with acceptable probability.
+								</li>
+								<li>
+									The final gui needs to be created using the .Net MVC Framework. 
+								</li>	
+								</ol>
+								
+							</br>
+								<b>My Role:</b>
+								Building the ML System.
+
+								</pre>		
+							</p>
+
+						
+
+							<h1>Implementation Details</h1>
+
+							<h2>About the Data</h2>		
+
+							<h4>In this section will discuss the input and the output and the way we prepared out dataset in brief</h4>
+								<!-- imahe of one of the pdf -->
+								<!-- one good and one bad -->
+
+							<h4>Output:</h4>
+							<p>
+								Before looking at the input data lets take a look at the ouptut and understant the problem.Below is the image of the 
+								all the possiable root causes. Our problem is a multilabel problem where the model can predict one or n of such root causes.
+								There are 6 main categories of root causes and they have all have distinct root causes there are 42 distinct root causes
+								 (except other which was not considered as it doesn't convey any information).
+							</p>
+
+							<span><img src="images/output.png" alt="" 
+								style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+
+
+							<h3>Preparing the Input Data</h3>
+							
+							<span><img src="images/input_3.png" alt="" 
+								style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+
+
+							<p>
+							The input to the model is text data (refer to the image above )which comes more the deviation forms provided by our clients. From the above image 
+							the area highlighed in read will be our models input but first we needed  to extract the text from the forms which are all in  pdf format.
+							We were given deviation forms from 9 different companies.In  the above figure  we can see the unstructured / unorganized data which was provided to us. 		
+							These folders along with the deviation forms were mixed with other documents which we had to remove.
+					
+							A big problem we faced and the reason we didn't use a OCR system  was that the  deviation forms were documented
+							by different companies and each company had a different format for recording their data. Some were digitally recorded 
+							and visually understandable while others were hand written, and difficult to understand. Below I have porvided two images
+							from different companies we had 100 of such deviation forms mixed with other data.
+							</p>
+
+							<span><img src="images/input_1.png" alt="" 
+								style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+							<h5>deviation form exmaple 1 </h5>
+
+							<span><img src="images/input_2.png" alt="" 
+								style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+							<h5>deviation form exmaple 2 </h5>
+
+							
+							<p>
+								To deal with this problem we created an data extractor application in dot net. This application was 
+								later added to the final .Net application and with this we had a complete pipeline which collect data/store 
+								data , re-train the model and do prediction. 
+							</p>
+
+
+
+
+
+							<span><img src="images/extractorapp.png" alt="" 
+								style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+								/>
+							</span>
+							<p>
+							
+							Image of the software used to extract / convert the data from pdf to csv. Since the size of our model was small we
+							decided to include the data extractor in our final ml system.The extractor application provides an easy and standardized way to store data. 
+
+
+							</p>
+						
+						
+					<h3>Model Selection</h3>	
+					
+					<p> 
+						For model there were two things I had to consider the training time of the model and the memory requirments
+						as the final model would be hosted on a server. 
+						The size of your  dataset was fairly small so we could test the models training time and memory consumption 
+						so we used different larger datasets of the same type eg. (multilabel problems) we went for stackoverflow tag
+						prediction dataset containing 80,000 samples. 
+						
+						The models we considered are SVM , Multinomial Naive Bayes, Logistic Regression , SGDClassifier since this problem is 
+						differnt form binary and multiclass we had to use training stratigies to traing our models or find algorithms which could hangle 
+						multilabel targets.
+
+						Training stratigies include power transform and emsemble methods (OvR),we also used adoptive algorithems 
+
+						The training time and the memory requirments were to large for othe the power transforms 
+						and the adoptive algorithms which could not be trained even in coab.
+
+
+						We selected the OneVsRest Classifier with the SGDClassifier.
+
+						The main reason we went for SGD was because it supported the partial_fit() method which allows us to re-train the 
+						model on only a batch of data instead on the entire dataset saving time. The other reason was the different loss functions
+						supported by SGD which allows it to act like a logistic regression  or SVM depeding on the loss function value.
+
+
+
+					</p>
+
+					
+					<h2>Rest Api</h2>
+
+
+					<span><img src="images/rest_api.png" alt="" 
+						style="width:80%;border:5px solid blueviolet; border-radius: 10px; margin-left:100px;object-fit: cover;"
+						/>
+					</span>
+
+					<h3>The api hosted on heroku supports three routes 
+					</h3>
+					<ol>
+						<li>Predict: for prediction</li>
+						<li>Re-train Soft: Just train the model and send the score but doesnt store the new data</li>
+						<li>Re-train Hard: Re-trains the model and add the new samples to the existing samples.</li>
+					</ol>
+
+					<h3>More details about the preprocessing pipeline and model selection can be found in the project report 
+						<a href = "https://docs.google.com/document/d/1nNryMkCaZRhsIJxJQwoSFpF28pkTHkK43yN2v4ZEoLM/edit?usp=sharing"><u>here.</u></a>
+					 <!-- give link ti project report  -->
+					</h3>	
+
+					<h4>
+
+						As this is a company project I cannot provide the like to the final app but the link to a demo app is provided below 
+						This app a prototype and contains one of the many models we tries nevertheless this should provide a good view of how 
+						the final system works.
+						<em>Note: webapp is hosted on herokus free account and takes time to load.</em>
+
+
+					</h4>
+
+					<a href="https://deviation-error-analysis.herokuapp.com/" class="button">Use the Wep App.</a>
+
+					</div>
+					</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+		<!-- Footer
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer> -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
